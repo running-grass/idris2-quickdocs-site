@@ -1,0 +1,433 @@
+<!DOCTYPE html><html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>posix</title>
+  <link rel="stylesheet" type="text/css" id="preferredStyle" href="default.css">
+  <script>
+    /* Updates the stylesheet to use the preferred one.
+       Note that we set the link to root ++ sourceLoc because the config
+       is shared across the whole website, so the root may differ from
+       page to page.
+    */
+    function setStyleSource (sourceLoc) {
+      document.getElementById("preferredStyle").href = "" + sourceLoc + ".css";
+      document.getElementById("selectPreferredStyle").value = sourceLoc;
+    }
+    /* Initialises the preferred style sheet:
+       1. if there is a stored value then use that
+          otherwise select the default
+       2. set both the css link href & the drop down menu selected option
+    */
+    function initStyleSource () {
+      var preferredStyle = localStorage.getItem("stylefile");
+      if (preferredStyle !== null) {
+        setStyleSource(preferredStyle);
+      } else {
+        setStyleSource("default");
+      };
+    }
+    function saveStyleSource (preferredStyle) {
+      localStorage.stylefile = preferredStyle;
+    }
+    </script>
+</head>
+
+<body class="index">
+<header>
+  <strong>Idris2Doc</strong> : posix
+  <nav><a href="index.html">Index</a>
+
+  <select id="selectPreferredStyle">
+    <option value="default">Default</option>
+<option value="alternative">Alternative</option>
+<option value="blackandwhite">Black & White</option>
+
+  </select>
+  </nav>
+
+  <script>
+  /* We start by initialising the style source */
+  initStyleSource();
+
+  /* This listens for changes on the drop down menu and updates the
+     css used for the current page when a selection is made.
+  */
+  document.getElementById("selectPreferredStyle").addEventListener("change", function(){
+    var selected = this.options[this.selectedIndex].value; /* the option chosen */
+    setStyleSource (selected);
+    saveStyleSource (selected);
+  });
+</script>
+
+</header>
+<div class="container"><h1>Package posix - Namespaces</h1><ul class="names"><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Dir.html">System.Posix.Dir</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Dir.Dir.html">System.Posix.Dir.Dir</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Dir.Prim.html">System.Posix.Dir.Prim</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Errno.html">System.Posix.Errno</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Errno.Type.html">System.Posix.Errno.Type</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.File.html">System.Posix.File</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.File.FileDesc.html">System.Posix.File.FileDesc</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.File.Flags.html">System.Posix.File.Flags</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.File.Prim.html">System.Posix.File.Prim</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.File.ReadRes.html">System.Posix.File.ReadRes</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.File.Stats.html">System.Posix.File.Stats</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.File.Type.html">System.Posix.File.Type</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.File.Whence.html">System.Posix.File.Whence</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Pipe.html">System.Posix.Pipe</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Pipe.Prim.html">System.Posix.Pipe.Prim</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Poll.html">System.Posix.Poll</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Poll.Types.html">System.Posix.Poll.Types</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Poll.Prim.html">System.Posix.Poll.Prim</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Poll.Struct.html">System.Posix.Poll.Struct</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Process.html">System.Posix.Process</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Process.Flags.html">System.Posix.Process.Flags</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Process.Prim.html">System.Posix.Process.Prim</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Process.ProcStatus.html">System.Posix.Process.ProcStatus</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Pthreads.html">System.Posix.Pthreads</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Pthreads.Prim.html">System.Posix.Pthreads.Prim</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Pthreads.Struct.html">System.Posix.Pthreads.Struct</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Pthreads.Types.html">System.Posix.Pthreads.Types</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Signal.html">System.Posix.Signal</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Signal.Prim.html">System.Posix.Signal.Prim</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Signal.Struct.html">System.Posix.Signal.Struct</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Signal.Types.html">System.Posix.Signal.Types</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Socket.html">System.Posix.Socket</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Socket.Prim.html">System.Posix.Socket.Prim</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Socket.Struct.html">System.Posix.Socket.Struct</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Socket.Types.html">System.Posix.Socket.Types</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Time.html">System.Posix.Time</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Time.Types.html">System.Posix.Time.Types</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Timer.html">System.Posix.Timer</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Timer.Prim.html">System.Posix.Timer.Prim</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Timer.Types.html">System.Posix.Timer.Types</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Posix.Limits.html">System.Posix.Limits</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li></ul></div><footer>Produced by Idris 2 version 0.7.0-da352d8ed</footer></body></html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html><html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>elab-util-extra</title>
+  <link rel="stylesheet" type="text/css" id="preferredStyle" href="default.css">
+  <script>
+    /* Updates the stylesheet to use the preferred one.
+       Note that we set the link to root ++ sourceLoc because the config
+       is shared across the whole website, so the root may differ from
+       page to page.
+    */
+    function setStyleSource (sourceLoc) {
+      document.getElementById("preferredStyle").href = "" + sourceLoc + ".css";
+      document.getElementById("selectPreferredStyle").value = sourceLoc;
+    }
+    /* Initialises the preferred style sheet:
+       1. if there is a stored value then use that
+          otherwise select the default
+       2. set both the css link href & the drop down menu selected option
+    */
+    function initStyleSource () {
+      var preferredStyle = localStorage.getItem("stylefile");
+      if (preferredStyle !== null) {
+        setStyleSource(preferredStyle);
+      } else {
+        setStyleSource("default");
+      };
+    }
+    function saveStyleSource (preferredStyle) {
+      localStorage.stylefile = preferredStyle;
+    }
+    </script>
+</head>
+
+<body class="index">
+<header>
+  <strong>Idris2Doc</strong> : elab-util-extra
+  <nav><a href="index.html">Index</a>
+
+  <select id="selectPreferredStyle">
+    <option value="default">Default</option>
+<option value="alternative">Alternative</option>
+<option value="blackandwhite">Black & White</option>
+
+  </select>
+  </nav>
+
+  <script>
+  /* We start by initialising the style source */
+  initStyleSource();
+
+  /* This listens for changes on the drop down menu and updates the
+     css used for the current page when a selection is made.
+  */
+  document.getElementById("selectPreferredStyle").addEventListener("change", function(){
+    var selected = this.options[this.selectedIndex].value; /* the option chosen */
+    setStyleSource (selected);
+    saveStyleSource (selected);
+  });
+</script>
+
+</header>
+<div class="container"><h1>Package elab-util-extra - Namespaces</h1><ul class="names"><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Language.Reflection.Compat.html">Language.Reflection.Compat</a>
+    </div>
+    <div class="index-namespace-doc">
+      This module contains copies of the pre-overhaul definitions of the `elab-util` library and/or code derived from these copies
+(the overhaul is this one: https://github.com/stefan-hoeck/idris2-elab-util/pull/56).
+This is done due to be able to migrate to the newer `elab-util` slowly, using both old and new definitions.
+
+This copying is done with the permission of Stefan Höck, the author and copyright holder of the `elab-util` library.
+
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Language.Reflection.Compat.Constr.html">Language.Reflection.Compat.Constr</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Language.Reflection.Compat.TypeInfo.html">Language.Reflection.Compat.TypeInfo</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Language.Reflection.Expr.html">Language.Reflection.Expr</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Language.Reflection.Expr.Interpolation.html">Language.Reflection.Expr.Interpolation</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Language.Reflection.Logging.html">Language.Reflection.Logging</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li></ul></div><footer>Produced by Idris 2 version 0.7.0-da352d8ed</footer></body></html>

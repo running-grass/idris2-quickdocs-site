@@ -1,0 +1,289 @@
+<!DOCTYPE html><html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>linux</title>
+  <link rel="stylesheet" type="text/css" id="preferredStyle" href="default.css">
+  <script>
+    /* Updates the stylesheet to use the preferred one.
+       Note that we set the link to root ++ sourceLoc because the config
+       is shared across the whole website, so the root may differ from
+       page to page.
+    */
+    function setStyleSource (sourceLoc) {
+      document.getElementById("preferredStyle").href = "" + sourceLoc + ".css";
+      document.getElementById("selectPreferredStyle").value = sourceLoc;
+    }
+    /* Initialises the preferred style sheet:
+       1. if there is a stored value then use that
+          otherwise select the default
+       2. set both the css link href & the drop down menu selected option
+    */
+    function initStyleSource () {
+      var preferredStyle = localStorage.getItem("stylefile");
+      if (preferredStyle !== null) {
+        setStyleSource(preferredStyle);
+      } else {
+        setStyleSource("default");
+      };
+    }
+    function saveStyleSource (preferredStyle) {
+      localStorage.stylefile = preferredStyle;
+    }
+    </script>
+</head>
+
+<body class="index">
+<header>
+  <strong>Idris2Doc</strong> : linux
+  <nav><a href="index.html">Index</a>
+
+  <select id="selectPreferredStyle">
+    <option value="default">Default</option>
+<option value="alternative">Alternative</option>
+<option value="blackandwhite">Black & White</option>
+
+  </select>
+  </nav>
+
+  <script>
+  /* We start by initialising the style source */
+  initStyleSource();
+
+  /* This listens for changes on the drop down menu and updates the
+     css used for the current page when a selection is made.
+  */
+  document.getElementById("selectPreferredStyle").addEventListener("change", function(){
+    var selected = this.options[this.selectedIndex].value; /* the option chosen */
+    setStyleSource (selected);
+    saveStyleSource (selected);
+  });
+</script>
+
+</header>
+<div class="container"><h1>Package linux - Namespaces</h1><ul class="names"><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Epoll.html">System.Linux.Epoll</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Epoll.Flags.html">System.Linux.Epoll.Flags</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Epoll.Prim.html">System.Linux.Epoll.Prim</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Epoll.Struct.html">System.Linux.Epoll.Struct</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Eventfd.html">System.Linux.Eventfd</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Eventfd.Eventfd.html">System.Linux.Eventfd.Eventfd</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Eventfd.Flags.html">System.Linux.Eventfd.Flags</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Eventfd.Prim.html">System.Linux.Eventfd.Prim</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Inotify.html">System.Linux.Inotify</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Inotify.Flags.html">System.Linux.Inotify.Flags</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Inotify.Inotify.html">System.Linux.Inotify.Inotify</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Inotify.Prim.html">System.Linux.Inotify.Prim</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Pipe.html">System.Linux.Pipe</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Pipe.Prim.html">System.Linux.Pipe.Prim</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Pthreads.html">System.Linux.Pthreads</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Pthreads.Prim.html">System.Linux.Pthreads.Prim</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Signalfd.html">System.Linux.Signalfd</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Signalfd.Flags.html">System.Linux.Signalfd.Flags</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Signalfd.Prim.html">System.Linux.Signalfd.Prim</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Signalfd.Struct.html">System.Linux.Signalfd.Struct</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Timerfd.html">System.Linux.Timerfd</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Timerfd.Flags.html">System.Linux.Timerfd.Flags</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Timerfd.Prim.html">System.Linux.Timerfd.Prim</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.Timerfd.Timerfd.html">System.Linux.Timerfd.Timerfd</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/System.Linux.User.Passwd.html">System.Linux.User.Passwd</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li></ul></div><footer>Produced by Idris 2 version 0.7.0-da352d8ed</footer></body></html>

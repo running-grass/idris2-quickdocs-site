@@ -1,0 +1,318 @@
+<!DOCTYPE html><html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>containers</title>
+  <link rel="stylesheet" type="text/css" id="preferredStyle" href="default.css">
+  <script>
+    /* Updates the stylesheet to use the preferred one.
+       Note that we set the link to root ++ sourceLoc because the config
+       is shared across the whole website, so the root may differ from
+       page to page.
+    */
+    function setStyleSource (sourceLoc) {
+      document.getElementById("preferredStyle").href = "" + sourceLoc + ".css";
+      document.getElementById("selectPreferredStyle").value = sourceLoc;
+    }
+    /* Initialises the preferred style sheet:
+       1. if there is a stored value then use that
+          otherwise select the default
+       2. set both the css link href & the drop down menu selected option
+    */
+    function initStyleSource () {
+      var preferredStyle = localStorage.getItem("stylefile");
+      if (preferredStyle !== null) {
+        setStyleSource(preferredStyle);
+      } else {
+        setStyleSource("default");
+      };
+    }
+    function saveStyleSource (preferredStyle) {
+      localStorage.stylefile = preferredStyle;
+    }
+    </script>
+</head>
+
+<body class="index">
+<header>
+  <strong>Idris2Doc</strong> : containers
+  <nav><a href="index.html">Index</a>
+
+  <select id="selectPreferredStyle">
+    <option value="default">Default</option>
+<option value="alternative">Alternative</option>
+<option value="blackandwhite">Black & White</option>
+
+  </select>
+  </nav>
+
+  <script>
+  /* We start by initialising the style source */
+  initStyleSource();
+
+  /* This listens for changes on the drop down menu and updates the
+     css used for the current page when a selection is made.
+  */
+  document.getElementById("selectPreferredStyle").addEventListener("change", function(){
+    var selected = this.options[this.selectedIndex].value; /* the option chosen */
+    setStyleSource (selected);
+    saveStyleSource (selected);
+  });
+</script>
+
+</header>
+<div class="container"><h1>Package containers - Namespaces</h1><ul class="names"><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.BoundedQueue.html">Data.BoundedQueue</a>
+    </div>
+    <div class="index-namespace-doc">
+      Bounded Queues
+
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.FVect.html">Data.FVect</a>
+    </div>
+    <div class="index-namespace-doc">
+      Fin-based vects encode not just their current size but also their
+largest size. See also Data.FVect.Capacity for a view that is
+useful when determining if you want to add to an FVect depending
+on whether or not it is full.
+
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.FVect.Capacity.html">Data.FVect.Capacity</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.HashPSQ.html">Data.HashPSQ</a>
+    </div>
+    <div class="index-namespace-doc">
+      Hash Priority Search Queue
+
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.HashPSQ.Internal.html">Data.HashPSQ.Internal</a>
+    </div>
+    <div class="index-namespace-doc">
+      Hash Priority Search Queue Internals
+
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.LRUCache.html">Data.LRUCache</a>
+    </div>
+    <div class="index-namespace-doc">
+      Least Recently Used (LRU) Cache
+
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.LRUCache.Internal.html">Data.LRUCache.Internal</a>
+    </div>
+    <div class="index-namespace-doc">
+      Least Recently Used (LRU) Cache Internals
+
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.Map.html">Data.Map</a>
+    </div>
+    <div class="index-namespace-doc">
+      Finite Maps
+
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.Map.Internal.html">Data.Map.Internal</a>
+    </div>
+    <div class="index-namespace-doc">
+      Map Internals
+
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.NatPSQ.html">Data.NatPSQ</a>
+    </div>
+    <div class="index-namespace-doc">
+      Ordered Nat Priority Search Queue
+
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.NatPSQ.Internal.html">Data.NatPSQ.Internal</a>
+    </div>
+    <div class="index-namespace-doc">
+      Ordered Nat Priority Search Queue Internals
+
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.OrdPSQ.html">Data.OrdPSQ</a>
+    </div>
+    <div class="index-namespace-doc">
+      Ordered Priority Search Queue
+
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.OrdPSQ.Internal.html">Data.OrdPSQ.Internal</a>
+    </div>
+    <div class="index-namespace-doc">
+      Ordered Priority Search Queue Internals
+
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.Queue.html">Data.Queue</a>
+    </div>
+    <div class="index-namespace-doc">
+      Immutable FIFO Queues
+
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.RRBVector.html">Data.RRBVector</a>
+    </div>
+    <div class="index-namespace-doc">
+      Relaxed Radix Balanced Vectors (RRB-Vectors)
+
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.RRBVector.Internal.html">Data.RRBVector.Internal</a>
+    </div>
+    <div class="index-namespace-doc">
+      RRB Vector Internals
+
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.Seq.Internal.html">Data.Seq.Internal</a>
+    </div>
+    <div class="index-namespace-doc">
+      This module is not intended to be imported directly.
+Please use Data.Seq or Data.Seq.Seq' instead.
+
+The implementation of fingertree comes from
+<http://hackage.haskell.org/package/containers-0.2.0.1/docs/src/Data-Sequence.html>
+
+The original code is under a BSD-style license, compatible with this project.
+
+Original Copyrights: Copyright 2004, The University Court of the University of Glasgow
+                     (c) Ross Paterson 2005
+
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.Seq.Sized.html">Data.Seq.Sized</a>
+    </div>
+    <div class="index-namespace-doc">
+      General purpose two-end finite sequences,
+with length in its type.
+
+This is implemented by finger tree.
+
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.Seq.Unsized.html">Data.Seq.Unsized</a>
+    </div>
+    <div class="index-namespace-doc">
+      General purpose two-end finite sequences.
+
+This is implemented by finger tree.
+
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.Set.html">Data.Set</a>
+    </div>
+    <div class="index-namespace-doc">
+      Finite Sets
+
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.Set.Internal.html">Data.Set.Internal</a>
+    </div>
+    <div class="index-namespace-doc">
+      Set Internals
+
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.SnocVect.html">Data.SnocVect</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.SnocVect.Elem.html">Data.SnocVect.Elem</a>
+    </div>
+    <div class="index-namespace-doc">
+      
+    </div>
+  </div>
+</li><li>
+  <div class="index-wrapper">
+    <div class="index-namespace-url">
+      <a class="code" href="docs/Data.Tree.html">Data.Tree</a>
+    </div>
+    <div class="index-namespace-doc">
+      Finite Rose Trees
+
+    </div>
+  </div>
+</li></ul></div><footer>Produced by Idris 2 version 0.7.0-da352d8ed</footer></body></html>

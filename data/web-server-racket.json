@@ -1,0 +1,1 @@
+[{"html_filename":"web-server-racket/docs/docs/WebServerRacket.html","package":"web-server-racket","namespace":"WebServerRacket","name":"runResponder","typ":"PGAuthentication -> (Request -> InnerCont (List Frame)) -> IO ()","prefix":"","html_id":"WebServerRacket.runResponder"}]
